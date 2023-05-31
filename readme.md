@@ -3,7 +3,7 @@
 Welcome to this Flask web development project. We'll be utilizing Python, Flask, Pytest, and JSON to create a simple Flask application that serves your resume as a JSON response.
 ## Required Educational Videos
 
-* [Instructor Video]()
+* [Instructor Video](https://youtu.be/wb_Oa6VEOnI)
 
 To help understand the fundamental concepts involved, watch these hand-picked videos:
 
@@ -16,6 +16,18 @@ To help understand the fundamental concepts involved, watch these hand-picked vi
 ## Readings
 - [Python, Virtual Enviroments, Flask, Pip, and PyTest](python.md)
 - [ChatGPT Prompts](chatgpt.md)
+
+### General Help
+* VSCode - [here](https://youtu.be/B-s71n0dHUk)
+* VSCode /w Git & GitHub - [here](https://www.youtube.com/watch?v=i_23KUAEtUM)* Node.JS Introduction - [here](https://www.youtube.com/watch?v=JZXQ455OT3A)
+* SETTING UP SSH KEYS SO YOU CAN CONNECT VSCode to GitHub - [here - Windows ONLY](https://www.youtube.com/watch?v=a-zX_qc2S-M)
+* SETTIG UP SSH KEYS SO YOU CAN CONNECT VSCode to GitHub - [here - MacOS Only](https://www.youtube.com/watch?v=cGcpVQlhbuI)
+* GIT &  GitHub Playlist - [here](https://www.youtube.com/watch?v=6KoBsJfYBPM&list=PL0Zuz27SZ-6PkWWk_mA2vkimUTJf81mNz)
+#### Optional YouTube - At least watch these if you know all the stuff above.
+* VS Code Top Extensions - [here](https://youtu.be/xQcpQfEumQw)
+* Browser Dev Tools Tips and Tricks - [here](https://www.youtube.com/watch?v=TcTSqhpm80Y)
+
+
 
 ## Learning Objectives
 
