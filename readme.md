@@ -1,6 +1,17 @@
 # Flask Web Development Project: Create and Test a Resume API Endpoint
 
 Welcome to this Flask web development project. We'll be utilizing Python, Flask, Pytest, and JSON to create a simple Flask application that serves your resume as a JSON response.
+## Required Educational Videos
+
+* [Instructor Video]()
+
+To help understand the fundamental concepts involved, watch these hand-picked videos:
+
+1. [JSON in 1 minute](https://www.youtube.com/watch?v=7mj-p1Os6QA)
+2. [Flask Quick App with Network Chuck](https://www.youtube.com/watch?v=5aYpkLfkgRE)
+3. [Introduction to REST API](https://www.youtube.com/watch?v=lsMQRaeKNDk)
+4. [Understanding PyTest and Unit Testing Overall](https://www.youtube.com/watch?v=UMgxJvozR5A)
+5. [GitHub Action with CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
 ## Learning Objectives
 
@@ -32,20 +43,6 @@ The application serves two routes:
 - The "/static/resume.json" URL: Serves your `resume.json` file from the `static` directory.
 
 ### Step 3: Setup the Application
-
-#### Required Educational Videos
-
-* [Instructor Video]()
-
-To help understand the fundamental concepts involved, watch these hand-picked videos:
-
-1. [JSON in 1 minute](https://www.youtube.com/watch?v=7mj-p1Os6QA)
-2. [Flask Quick App with Network Chuck](https://www.youtube.com/watch?v=5aYpkLfkgRE)
-3. [Introduction to REST API](https://www.youtube.com/watch?v=lsMQRaeKNDk)
-4. [Understanding PyTest and Unit Testing Overall](https://www.youtube.com/watch?v=UMgxJvozR5A)
-5. [GitHub Action with CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
-
-#### Installation and Setup
 
 1. **Clone the repository**: After accepting the assignment, clone the repository to your local machine.  **MAKE SURE YOU HAVE SSH KEYS SETUP SEE THE VIDEOS BELOW**
 2. **Create a virtual environment**: Use `python3 -m venv venv` to create a virtual environment in the project directory.
