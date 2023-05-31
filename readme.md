@@ -1,42 +1,58 @@
-# Welcome to the Flask Web Development Project
+# Flask Web Development Project: Create and Test a Resume API Endpoint
 
-In this project, you'll learn and apply your skills in Python, Flask, Pytest, and JSON. We've designed a basic Flask application which serves a static JSON file. You'll be coding your own resume into this JSON file, and learn about the importance of testing in web development. 
+Welcome to this Flask web development project. We'll be utilizing Python, Flask, Pytest, and JSON to create a simple Flask application that serves your resume as a JSON response.
 
-## Getting Started
+## Learning Objectives
 
-1. **Accept the GitHub Classroom assignment**: Click on the assignment link provided by your instructor. You'll be redirected to GitHub Classroom where you'll need to accept the assignment.
+By the end of this project, you should be able to:
 
-2. **Code your resume**: Navigate to `application/static/` and open `resume.json`. Fill in your own information in the appropriate fields in the JSON file. Ensure that you're maintaining the correct JSON format as you do this.
+1. **Understand Web Frameworks**: Learn how Flask, a lightweight web framework for Python, handles routing and responses.
+2. **Work with JSON**: Learn to write and format JSON, a key data interchange format in web development. You'll encode your resume into a JSON file.
+3. **Improve Python Development Practices**: Enhance your Python skills in web development context, using virtual environments and pip, Python's package installer.
+4. **Use Test Frameworks**: Understand the importance of testing in software development and learn to write and run tests using Pytest, a popular Python testing framework.
+5. **Understand Web Server Operation**: Learn how a web server works, from serving static files to handling routes.
+6. **Practice Version Control with Git**: Use Git for version control, from cloning a repository to making and pushing changes.
+7. **Understand Continuous Integration/Continuous Deployment (CI/CD)**: Get an introduction to CI/CD concepts through GitHub Actions.
+8. **Organize and Execute a Project**: Practice project organization, manage dependencies, and follow instructions to meet project objectives.
 
-## How the program works
 
-This program is a simple Flask web application. When you run the program, it starts a web server on your local machine. It's configured to serve two routes:
+## Project Steps
 
-- The root URL ("/") returns a "Hello, World!" message.
-- The "/static/resume.json" URL serves the `resume.json` file from the `static` directory. 
+### Step 1: Creating Your Resume
 
-The `resume.json` file is where you'll be coding your resume. When you navigate to "/static/resume.json" in your web browser, you'll see your resume displayed as a JSON object.
+1. Navigate to `application/static/` and open `resume.json`.
+2. Fill in your details in the respective fields, ensuring to maintain correct JSON format.
+3. Refer to the [example.json](example.json) for guidance, but remember JSON does not support comments.
 
-## Installation and Setup
+### Step 2: Understand the Flask Application
 
-1. **Clone the repository**: After accepting the assignment, clone the repository to your local machine.
+The application serves two routes:
 
-2. **Create a virtual environment**: Navigate to the project directory in your terminal and run the command `python3 -m venv venv` to create a virtual environment. This keeps your project's dependencies isolated from other projects.
+- The root URL ("/"): Returns a "Hello, World!" message.
+- The "/static/resume.json" URL: Serves your `resume.json` file from the `static` directory.
 
-3. **Activate the virtual environment**: Activate the virtual environment using the command `source venv/bin/activate` on Unix/macOS or `venv\Scripts\activate` on Windows.
+### Step 3: Setup the Application
 
-4. **Install the requirements**: Install the necessary packages using the command `pip install -r requirements.txt`.
+#### Required Educational Videos
 
-5. **Run the application**: Start the application with the command `flask run`. Then, navigate to `http://localhost:5000/` in your web browser to see your application running. To run the server in debug mode, which provides more detailed error messages and automatically restarts the server when it detects changes in your code, use the command `flask run --debug`.
+* [Instructor Video]()
 
-## Testing with Pytest
+To help understand the fundamental concepts involved, watch these hand-picked videos:
 
-Testing is a crucial part of web development. In this project, you'll be using Pytest, a testing framework for Python.
+1. [JSON in 1 minute](https://www.youtube.com/watch?v=7mj-p1Os6QA)
+2. [Flask Quick App with Network Chuck](https://www.youtube.com/watch?v=5aYpkLfkgRE)
+3. [Introduction to REST API](https://www.youtube.com/watch?v=lsMQRaeKNDk)
+4. [Understanding PyTest and Unit Testing Overall](https://www.youtube.com/watch?v=UMgxJvozR5A)
+5. [GitHub Action with CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-There are some predefined tests in the `tests` directory. To run these tests, simply use the command `pytest` in your terminal while you're in the project directory. 
+#### Installation and Setup
 
-Make sure your application is serving the `resume.json` file correctly by running the predefined tests and ensuring they all pass. If the tests fail, they will provide feedback about what's going wrong, which can guide you in debugging your application.
+1. **Clone the repository**: After accepting the assignment, clone the repository to your local machine.  **MAKE SURE YOU HAVE SSH KEYS SETUP SEE THE VIDEOS BELOW**
+2. **Create a virtual environment**: Use `python3 -m venv venv` to create a virtual environment in the project directory.
+3. **Activate the virtual environment**: Use `source venv/bin/activate` (Unix/macOS) or `venv\Scripts\activate` (Windows).
+4. **Install necessary packages**: Use `pip install -r requirements.txt`.
+5. **Run the application**: Use `flask run` and visit `http://localhost:5000/` on your browser.
 
-Remember, in the real world, a project would have many more tests and you'd typically write tests for any new features you develop.
+### Step 4: Test Your Application with Pytest
 
-Enjoy coding and learning!
+Testing is crucial in web development. For this project, we will use Pytest to ensure your `resume.json` is being served correctly. Run the predefined tests in the `tests` directory by using `pytest` in your terminal.
