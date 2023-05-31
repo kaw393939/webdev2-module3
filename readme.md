@@ -13,6 +13,10 @@ To help understand the fundamental concepts involved, watch these hand-picked vi
 4. [Understanding PyTest and Unit Testing Overall](https://www.youtube.com/watch?v=UMgxJvozR5A)
 5. [GitHub Action with CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
+## Readings
+- [Python, Virtual Enviroments, Flask, Pip, and PyTest](python.md)
+- [ChatGPT Prompts](chatgpt.md)
+
 ## Learning Objectives
 
 By the end of this project, you should be able to:
@@ -29,6 +33,14 @@ By the end of this project, you should be able to:
 
 ## Project Steps
 
+### Step 0: Setup the Application
+
+1. **Clone the repository**: After accepting the assignment, clone the repository to your local machine.  **MAKE SURE YOU HAVE SSH KEYS SETUP SEE THE VIDEOS BELOW**
+2. **Create a virtual environment**: Use `python3 -m venv venv` to create a virtual environment in the project directory.
+3. **Activate the virtual environment**: Use `source venv/bin/activate` (Unix/macOS) or `venv\Scripts\activate` (Windows).
+4. **Install necessary packages**: Use `pip install -r requirements.txt`.
+5. **Run the application**: Use `flask run` and visit `http://localhost:5000/` on your browser.
+
 ### Step 1: Creating Your Resume
 
 1. Navigate to `application/static/` and open `resume.json`.
@@ -40,16 +52,8 @@ By the end of this project, you should be able to:
 The application serves two routes:
 
 - The root URL ("/"): Returns a "Hello, World!" message.
-- The "/static/resume.json" URL: Serves your `resume.json` file from the `static` directory.
+- The "/static/resume.json" URL: Serves your `resume.json` file from the `static` directory.  (IT WON't SHOW ANYTHING TILL YOU CODE YOUR RESUME INTO JSON IN THE FILE)
 
-### Step 3: Setup the Application
-
-1. **Clone the repository**: After accepting the assignment, clone the repository to your local machine.  **MAKE SURE YOU HAVE SSH KEYS SETUP SEE THE VIDEOS BELOW**
-2. **Create a virtual environment**: Use `python3 -m venv venv` to create a virtual environment in the project directory.
-3. **Activate the virtual environment**: Use `source venv/bin/activate` (Unix/macOS) or `venv\Scripts\activate` (Windows).
-4. **Install necessary packages**: Use `pip install -r requirements.txt`.
-5. **Run the application**: Use `flask run` and visit `http://localhost:5000/` on your browser.
-
-### Step 4: Test Your Application with Pytest
+### Step 3: Test Your Application with Pytest
 
 Testing is crucial in web development. For this project, we will use Pytest to ensure your `resume.json` is being served correctly. Run the predefined tests in the `tests` directory by using `pytest` in your terminal.
