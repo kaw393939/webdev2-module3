@@ -1,10 +1,10 @@
 # Assignment: Building and Testing a Resume API
 
-In this assignment, you will work on a Flask application that serves as a Resume API. You'll be responsible for both implementing the API to pass the automated Pytest.  I have removed the code from [application/__init__py and put a copy for reference here](backup_app.py)
+In this assignment, you will work on a Flask application that serves as a Resume API. You'll be responsible for implementing the API to pass the automated Pytest.  I have removed the code from [application/__init__py and put a copy for reference here](backup_app.py)
 
-From a code poinit of view this unit is easy and it is just to introduce you to the concepts and basic termiinology used to make REST API.  I'm giving you the code for the assignment because you really need to understand it and we will be building on this to make it a more complete API.  Currently, the data is just stored in the application instance and not a database.  There are a lot of features we need to add to make this a complete professional standards compliant API, but you will get lost when we do this, if you don't understand the basics.  In later units, i'm going to show you some libraries that automate some things for you; however, you need to completely understand the code we have now and the concepts in the presentation.
+From a code point of view this unit is easy and it is just to introduce you to the concepts and basic termiinology used to make REST API.  I'm giving you the code for the assignment because you really need you to understand it and we will be building on this to make it a more complete API.  Currently, the data is just stored in the application instance and not a database.  There are a lot of features we need to add to make this a complete professional standards compliant API, but you will get lost when we do this, if you don't understand the basics.  In later units, i'm going to show you some libraries that automate some things for you; however, you need to completely understand the code we have now and the concepts in the presentation.
 
-- Instructor Video - [here]()
+- Instructor Video - [here](https://youtu.be/XLviw9W7IZw)
 
 ## Learning Objectives
 
@@ -16,9 +16,6 @@ By the end of this project, you should be able to:
 4. **Understand HTTP Response Codes**: Use appropriate HTTP status codes to indicate the success or failure of a request.
 5. **Write Code and Pass Tests**: Code your App  to Pass the Tests
 
-    ```shell
-    flask run
-    ```
 
 ## Project Steps
 
@@ -31,14 +28,13 @@ By the end of this project, you should be able to:
 
 * *Your task is to implement a RESTful API based on the structure of the resume. Your API should have routes corresponding to the main sections of the resume: basics, work, volunteer, education, awards, publications, skills, languages, interests, and references. Each route should support the four main HTTP methods: GET, POST, PUT, DELETE and return appropriate status codes.
 
-### Step 3: Testing the API
+### Step 3: Testing the API with PyTest and The REST Client Extension for VSCODE 
 
-* Write tests for your API using Pytest. You should write tests for each of the routes and HTTP methods that you've implemented. Make sure to test for both expected and unexpected inputs, checking that your API behaves appropriately in each case.  You should also install the REST Client in VsCode and run the API using this [file](requests.http).  This file has the requests and you can see your API responses, its helpful for testing and development to undertand this.  You can see this immedietly by just copying the code I am giving you and runinig the server.
+* You should  rewrite the example I gave you to pass tests for each of the routes and HTTP methods that you've implemented.  You should also [install the REST Client in VsCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) and run the API using this [file](requests.http).  This file has the requests and you can see your API responses, its helpful for testing and development to undertand this.  You can see this immedietly by just copying the code I am giving you and runinig the server.
 
 ## Submission Guidelines
 
-- Push your changes to GitHub and submit the link to your repository to Canvas. Make sure that your repository is set to public so that we can access your work.
-
+- Push your changes to GitHub and submit the link to your repository to Canvas when you get all green for github Actions. 
 
 ## Project Setup
 
@@ -75,3 +71,7 @@ By the end of this project, you should be able to:
     ```
 
 6. **Run the application**: Use `flask run` to start the application and then visit `http://127.0.0.1:5000/` on your browser:
+
+    ```shell
+    flask run
+    ```
