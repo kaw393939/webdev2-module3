@@ -10,13 +10,25 @@ Also, keep in mind that as of September 2021, ChatGPT has not been trained with 
 
 If you want to learn more about the tools and technologies we're using in this assignment, ChatGPT is here to help! Here are some suggested prompts:
 
-1. "Can you help me understand what a Flask web framework is and why it's important in this project?"
-2. "Could you explain the structure of a JSON file? How do I fill in my details in the `resume.json` file?"
-3. "What does a virtual environment do and why do we need it for this project?"
-4. "Can you guide me through the process of activating the virtual environment?"
-5. "I'm not sure how to install the required packages using `pip install -r requirements.txt`. Can you explain what this command does?"
-6. "I've run the Flask application but I'm not seeing anything when I navigate to `http://localhost:5000/`. What could be the issue?"
-7. "Can you explain the concept of testing in web development? Why are we using Pytest in this project?"
-8. "One of the Pytest tests failed. How can I understand the error message and debug this?"
-9. "I'm having trouble understanding Git and GitHub. Can you provide a brief explanation or point me towards some resources?"
-10. "I want to make sure my `resume.json` is formatted correctly. Could you provide a sample JSON object for reference?"
+# Additional Learning Prompts for Understanding APIs
+
+1. **Investigate other Web Frameworks**: We used Flask for this project. Research another popular web framework, such as Django, and compare it to Flask. What are the key differences and similarities?
+
+2. **Deep Dive into HTTP**: Research more about HTTP methods. How do the other methods, such as PATCH and HEAD, work?
+
+3. **Explore Status Codes**: We've used a few HTTP status codes in this project. Find out about other status codes and their uses.
+
+4. **Extend the API**: Think about other features you could add to this API. How would you implement them? Try adding at least one of these features.
+
+5. **Study Security Measures**: Our API is currently unsecured. Research API security and implement at least one security measure.
+
+6. **Learn about API Documentation**: Look at some examples of good API documentation. Then, write documentation for your Resume API.
+
+7. **Understand Authentication and Authorization**: APIs often require authentication and authorization to protect sensitive data. Understand the difference between these two terms and learn about different strategies (like JWT, OAuth) to implement them.
+
+8. **Implement Pagination**: If our resume had many entries under a particular section (like work history), it might not be practical to return them all at once. Learn about pagination and implement it in one of your API endpoints.
+
+9. **Discover API Testing Tools**: In addition to Pytest, there are other tools like Postman that can be used to test APIs. Learn about one of these tools and use it to test your API.
+
+10. **Use a Database**: Right now, our data is stored in a JSON file. Learn about databases, choose one (like PostgreSQL, MongoDB), and modify your API to use a database for storing data.
+
