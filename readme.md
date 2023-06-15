@@ -1,40 +1,149 @@
-# Assignment: Building and Testing a Resume API
+# Assignment: Enhancing and Testing a Resume API
 
-In this assignment, you will work on a Flask application that serves as a Resume API. You'll be responsible for implementing the API to pass the automated Pytest.  I have removed the code from [application/__init__py and put a copy for reference here](backup_app.py)
+In this assignment, you will be enhancing a Flask application that serves as a Resume API. This assignment aims to introduce you to the professional Git workflow, the concept of Object Relational Mapping (ORM), and data validation, all of which are critical in professional software development. You will be utilizing SQLAlchemy, a popular ORM for Python, and will be introduced to how an ORM allows you to interact with your database like you would with SQL.
 
-From a code point of view this unit is easy and it is just to introduce you to the concepts and basic termiinology used to make REST API.  I'm giving you the code for the assignment because you really need you to understand it and we will be building on this to make it a more complete API.  Currently, the data is just stored in the application instance and not a database.  There are a lot of features we need to add to make this a complete professional standards compliant API, but you will get lost when we do this, if you don't understand the basics.  In later units, i'm going to show you some libraries that automate some things for you; however, you need to completely understand the code we have now and the concepts in the presentation.
+You will be given an existing codebase, and your task is to extend it by adding new fields, updating existing ones, and ensuring the OpenAPI documentation is up to date. The data model of the API is a resume, which has fields like name, title, skills, etc. 
 
-- Instructor Video - [here](https://youtu.be/XLviw9W7IZw)
+This project uses Flask-Smorest, which integrates Flask, Marshmallow, and Open Api apispec to help you build a robust RESTful API with minimal effort. Marshmallow is used for data validation and serialization/deserialization, and we will use an in-memory SQL database for quick and reliable testing. 
+
+You will be implementing and refining BREAD operations (Browse, Read, Edit, Add, and Delete) for the resume data and making Git commits throughout the process, which will highlight your understanding and application of good version control practices. 
 
 ## Learning Objectives
 
 By the end of this project, you should be able to:
 
-1. **Build and Run a RESTful API**: Use Flask, a lightweight web framework for Python, to construct a RESTful API.
-2. **Work with JSON**: Understand how JSON is used as a data interchange format in web development, and use it to structure the data in your API.
-3. **Apply HTTP Methods**: Implement CRUD (Create, Read, Update, Delete) operations using appropriate HTTP methods.
-4. **Understand HTTP Response Codes**: Use appropriate HTTP status codes to indicate the success or failure of a request.
-5. **Write Code and Pass Tests**: Code your App  to Pass the Tests
+1. **Understand and Apply Professional Git Workflow**: Understand and apply Git commands like push, pull, merge, and commit with meaningful messages. You will be practicing collaboration on an existing codebase.
+
+2. **Understand and Use an ORM**: Understand the concept of ORM and apply it in web development using SQLAlchemy. You will learn how SQLAlchemy interacts with Flask to manage an SQL database.
+
+3. **Understand and Apply Data Validation**: Understand the concept of data validation and apply it using Marshmallow. Data validation ensures the integrity of the data before it's processed by the API.
+
+4. **Extend and Refine a RESTful API**: You will be given a basic Flask API, and your task will be to extend and refine it according to the requirements and tests provided.
+
+5. **Generate and Update OpenAPI Specifications**: Use Flask-smorest to automatically generate OpenAPI specifications for your API, and ensure they are kept up-to-date as you modify the API.
+
+## Learning Materials
+
+**Instructor Video** - [here](https://youtu.be/XLviw9W7IZw)
+
+### Required Additionl Videos
+- Real-world Examples in Git Command Line Cheat Sheet - [here](git.md)
+- VSCode and Commits - [here](https://www.youtube.com/watch?v=E6ADS2k8oNQ)
+- VSCode and Branches - [here](https://www.youtube.com/watch?v=b9LTz6joMf8)
+- VSCode and Pull Requests - [here](https://www.youtube.com/watch?v=LdSwWxVzUpo)
+- Collaborative Git Command-line between Two Students - [here](https://www.youtube.com/watch?v=_wQdY_5Tb5Q)
+
+### Websites
+- In-depth Git Tutorial - [here](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud) - Ensure you go through all sections for a complete understanding of collaboration.
+- GitHub Flow - [here](https://docs.github.com/en/get-started/quickstart/github-flow)
+
+## Assignment Instructions
+
+Your task for this assignment is to modify the existing codebase to ensure it passes our grading tests. To start, clone the repository to your local machine and create a new branch. Spend some time reviewing the existing codebase and the [reference code](complete.py) I have provided. 
+
+Familiarize yourself with our grading [tests](tests/test_app.py). This will provide clarity on how to test the API and the types of tests you will make in the future.
+
+For each pull request(PR) I have included a name for the branch that you should use and an action section that has the commit message and what you need to do.
+
+## Assignment Steps
+
+1. **Initial Setup:** Start by accepting the assignment on GitHub Classroom to create your repository. Clone this repository to your local machine, and initiate your changes in a new branch.
+2. **Making Changes:** Modify the resume to meet the requirements of one of the pull requests listed below.
+3. **Committing Changes and Push:** Once you've confirmed the changes via testing, commit them with clear and descriptive commit messages and push them to GitHub
+4. **Creating Pull Requests:** After committing your changes, push your branch to the remote repository and create a new pull request via the GitHub page of your repository.
+5. **Review and Merge:** Normally, your teammates would review your changes and give feedback. For this assignment, you'll be self-reviewing and merging the pull request after providing comments.
+6. **Iteration:** After successfully merging your pull request, switch to the `master` branch and pull the latest updates. For additional modifications, create a new branch and repeat the process.
 
 
-## Project Steps
+## Pull Requests
 
-### Step 1: Understanding Your Resume
+1. **PR #1: Update String Length Limits in DB Model and Schema**
+   - Branch Name: `update-string-length-limits`
+   - Action: Update `tagline` field in `Resume` model to have a max length of 100.
+     - Commit Message: "Refactor: Updated max length of `tagline` field in `Resume` model to 100"
+   - Action: Update `tagline` field in `ResumeSchema` to validate a max length of 100.
+     - Commit Message: "Refactor: Enforced max length validation of 100 for `tagline` in `ResumeSchema`"
+   - Action: Add max length of 500 to `objective` field in `Resume` model.
+     - Commit Message: "Feature: Added max length of 500 to `objective` field in `Resume` model"
+   - Action: Update `objective` field in `ResumeSchema` to validate max length of 500.
+     - Commit Message: "Feature: Updated `objective` field in `ResumeSchema` to validate max length of 500"
 
-1. Navigate to `data/` and open `resume.json`.
-2. This file contains a sample resume. Take a moment to understand the structure and contents of this JSON file. If you wish, you can replace the sample resume with your own. Be careful to maintain the correct JSON format.
+2. **PR #2: Adjust Email Field Nullability**
+   - Branch Name: `adjust-email-nullability`
+   - Action: Make `email` field in `Resume` model nullable.
+     - Commit Message: "Refactor: Made `email` field in `Resume` model nullable"
+   - Action: Remove required validation for `email` field in `ResumeSchema`.
+     - Commit Message: "Refactor: Removed required validation for `email` field in `ResumeSchema`"
 
-### Step 2: Implementing the API
+3. **PR #3: Migrate SocialLinks, Education, Experience, Skills to PickleType and List Fields**
+   - Branch Name: `migrate-fields-to-pickletype-and-list`
+   - Action: Change `socialLinks`, `education`, `experience`, and `skills` fields in `Resume` model to `PickleType`.
+     - Commit Message: "Refactor: Migrated `socialLinks`, `education`, `experience`, and `skills` to `PickleType` in `Resume` model"
+   - Action: Change `socialLinks`, `education`, `experience`, and `skills` fields in `ResumeSchema` to `List(fields.String())` and make them required.
+     - Commit Message: "Refactor: Updated `socialLinks`, `education`, `experience`, and `skills` fields in `ResumeSchema` to `List(fields.String())` and made them required"
 
-* *Your task is to implement a RESTful API based on the structure of the resume. Your API should have routes corresponding to the main sections of the resume: basics, work, volunteer, education, awards, publications, skills, languages, interests, and references. Each route should support the four main HTTP methods: GET, POST, PUT, DELETE and return appropriate status codes.
+4. **PR #4: Update Blueprint Description**
+   - Branch Name: `update-blueprint-description`
+   - Action: Update the description of the blueprint from 'Operations on resumes' to 'This blueprint allows operations on the resumes of users. It supports basic CRUD operations.'
+     - Commit Message: "Docs: Updated blueprint description for clarity and detail"
 
-### Step 3: Testing the API with PyTest and The REST Client Extension for VSCODE 
+5. **PR #5: Update GET Method for All Resumes**
+   - Branch Name: `update-get-method-all-resumes`
+   - Action: Replace `Resume.query.all()` with `db.session.execute(select(Resume)).scalars().all()` in the `get` method of the `Resumes` class to improve SQL query execution.
+     - Commit Message: "Refactor: Optimized SQL query execution in `get` method of `Resumes` class"
+   - Action: Update the method comment to reflect this change: from "List all resumes" to "Retrieve all resumes from the database".
+     - Commit Message: "Docs: Updated method comment in `get` method of `Resumes` class for accuracy"
 
-* You should  rewrite the example I gave you to pass tests for each of the routes and HTTP methods that you've implemented.  You should also [install the REST Client in VsCode](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) and run the API using this [file](requests.http).  This file has the requests and you can see your API responses, its helpful for testing and development to undertand this.  You can see this immedietly by just copying the code I am giving you and runinig the server.
+6. **PR #6: Update POST Method for All Resumes**
+   - Branch Name: `update-post-method-all-resumes`
+   - Action: Update the method comment to reflect this change: from "Add a new resume" to "Create a new resume entry in the database".
+     - Commit Message: "Docs: Updated method comment in `post` method for `Resumes` for accuracy"
 
-## Submission Guidelines
+7. **PR #7: Update ALL the GET Methods for Resumes By ID**
+   - Branch Name: `update-all-get-method-resumes-by-id`
+   - Action: Replace `Resume.query.get_or_404(item_id)` with `db.get_or_404(Resume, item_id)` in the `get` method of the `ResumesById` class to handle not found exceptions.
+     - Commit Message: "Refactor: Updated `get` method in `ResumesById` class to handle not found exceptions"
+   - Action: Update the method comment to reflect this change: from "Get resume by ID" to "Retrieve a specific resume by ID from the database".
+     - Commit Message: "Docs: Updated method comment in `get` method for `ResumesById` class for accuracy"
+
+8. **PR #8: Update PUT Method for Resumes By ID**
+   - Branch Name: `update-put-method-resumes-by-id`
+   - Action: Change the name of the first parameter from `new_item` to `update_data` in the `put` method of the `ResumesById` class.
+     - Commit Message: "Refactor: Renamed first parameter in `put` method for `ResumesById` class for clarity"
+   - Action: Update the method comment to "Update existing resume".
+     - Commit Message: "Docs: Updated method comment in `put` method for `ResumesById` class for accuracy"
+
+9. **PR #9: Update API_TITLE**
+   - Branch Name: `update-api-title`
+   - Action: Change the value of `app.config["API_TITLE"]` from "Your API" to "Resume Manager".
+     - Commit Message: "Refactor: Updated `API_TITLE` to `Resume Manager` for relevancy"
+
+10. **PR #10: Update API_VERSION**
+   - Branch Name: `update-api-version`
+   - Action: Change the value of `app.config["API_VERSION"]` from "v1" to "v.1".
+     - Commit Message: "Refactor: Updated `API_VERSION` to `v.1` for consistency"
+
+## Submission Guidelines - MUST FOLLOW OR YOU GET A 0 WITH NO RESUBMIT
+
+- Remove the content in the current readme.md file and replace it with a screenshot of your commit history on GIThub - [see example](commit-history.png)
 
 - Push your changes to GitHub and submit the link to your repository to Canvas when you get all green for github Actions. 
+
+- Make sure all your tests pass
+
+- Make sure you at have all the commits required and no more.
+
+## Grading
+
+This assignment will be graded based on:
+
+1. The functionality of your API: Does it perform all the required operations correctly?
+
+2. Your use of Git: Did you make regular commits with meaningful messages? Did you successfully merge your branch
+
+Remember, the main goal of this assignment is to understand and apply the concepts of Git collaboration, ORM, and data validation. Don't worry if you don't get everything perfect on the first try. The important thing is to learn and improve as you go.
+
+Good luck
 
 ## Project Setup
 
