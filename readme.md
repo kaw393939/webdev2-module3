@@ -24,7 +24,7 @@ By the end of this project, you should be able to:
 
 ## Learning Materials
 
-**Instructor Video** - [here](https://youtu.be/XLviw9W7IZw)
+**Instructor Video** - [here](https://youtu.be/IiJ4p4ksqZU)
 
 ### Required Additionl Videos
 - Real-world Examples in Git Command Line Cheat Sheet - [here](git.md)
